@@ -21,7 +21,7 @@ func NewPostgresPool(connString string) (*pgxpool.Pool, error) {
 		return nil, fmt.Errorf("failed to parse connection string: %w", err)
 	}
 
-	// Set professional defaults for the connection pool.
+	// Set defaults for the connection pool.
 	config.MaxConns = 10
 	config.MinConns = 2
 	config.MaxConnIdleTime = 5 * time.Minute
